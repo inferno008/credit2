@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="c.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-search">
+                <a href="#" class="logo">Guitar<span>Shop</span></a>
+                <button id="greet-button" @click="greet">Greet</button> 
+                <div class="search-box">
+                    <input type="search" placeholder="Search here">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">On Offer</a></li>
+                <li><a href="#">Used Products</a></li>
+                <li><a href="#">Other Essentials</a></li>
+                <li><a href="#">New Products</a></li>
+                <li><a href="login.html">Login</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+       
+        <section class="intro">
+            <p>Welcome to GuitarShop!! This website is a place where you can buy used and new guitars and other musical instrument accessories. The main goal of this website is to sell quality products at a very affordable price.</p>
+        </section>
+        <section class="featured-products">
+            <p class="featured-title">Featured Products</p>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="guitar4.jpeg" alt="Gibson">
+                </div>
+                <p>Product Name: Gibson</p>
+                <p>Year: 2000</p>
+                <p>Type: Electric</p>
+                <p>Condition: Used</p>
+                <p>Price: $2100</p>
+                <button @click="saveProduct">Save Me</button>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="guitar2.jpeg" alt="Seagull">
+                </div>
+                <p>Product Name: Seagull</p>
+                <p>Year: 1975</p>
+                <p>Type: Acoustic</p>
+                <p>Condition: Unused</p>
+                <p>Price: $1000</p>
+                <button @click="saveProduct">Save Me</button>
+            </div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="guitar3.jpg" alt="Fender" width="200"> 
+                </div>
+                <p>Product Name: Fender</p>
+                <p>Year: 2023</p>
+                <p>Type: Electric</p>
+                <p>Condition: Unused</p>
+                <p>Price: $150</p>
+                <button @click="saveProduct">Save Me</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.2.30/dist/vue.global.prod.js"></script>
+    <script>
+        const { createApp } = Vue;
+
+        const app = createApp({
+            methods: {
+                greet() {
+                    alert("Buvan says hi!!");
+                },
+                saveProduct() {
+                    alert("Product saved!");
+                },
+            },
+        });
+
+        app.mount('.content');
+    </script>
+</body>
+</html>
+
+
